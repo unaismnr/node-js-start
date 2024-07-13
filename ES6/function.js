@@ -3,6 +3,7 @@
 //Note: scope of let is only inside of block. block is {}
 function hello() {
     var i = 0;
+    let hoi = 10;
     if (i === 0) {
         var hey = 30;
         let hoi = 50;
