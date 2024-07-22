@@ -13,7 +13,7 @@ app.use(cors());
 var con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    passwordl: '',
+    password: '',
     database: 'library',
 });
 
@@ -42,7 +42,7 @@ function verifyToken(req, res, next) {
         if (err) {
             res.status(500).send({ error: "Authentication failed" });
         } else {
-            res.send(decoded);
+            next()
         }
     });
 }
